@@ -1,0 +1,53 @@
+
+## DOM Access Functions
+
+* `document.getElementById(id)` → selects a single element by ID
+* `document.getElementsByClassName(className)` → selects all elements with a class (HTMLCollection)
+* `document.getElementsByTagName(tag)` → selects elements by tag name
+* `document.querySelector(selector)` → selects the first matching element
+* `document.querySelectorAll(selector)` → selects all matching elements (NodeList)
+
+
+
+## Content Read / Update Functions
+
+* `element.innerText` → gets or sets visible text inside an element
+* `element.innerHTML` → gets or sets HTML content inside an element
+* `element.textContent` → gets or sets all text content including hidden text
+
+
+
+## Create and Insert Functions
+
+* `document.createElement(tagName)` → creates a new HTML element
+* `parent.appendChild(child)` → adds a child element at the end
+* `parent.prepend(child)` → adds a child element at the beginning
+* `parent.insertBefore(newElement, referenceElement)` → inserts before a specific element
+
+
+
+## Remove Functions
+
+* `element.remove()` → removes an element from the DOM
+* `parent.removeChild(child)` → removes a child element from its parent
+
+
+
+## Attribute Functions
+
+* `element.setAttribute(name, value)` → sets an attribute
+* `element.getAttribute(name)` → gets an attribute value
+* `element.removeAttribute(name)` → removes an attribute
+
+
+
+## Style and Class Functions
+
+* `element.style.property` → changes inline CSS styles
+* `element.classList.add()` → adds a class
+* `element.classList.remove()` → removes a class
+* `element.classList.toggle()` → toggles a class on/off
+
+
+
+
