@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Random Quote Generator</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    body {
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: linear-gradient(135deg, #667eea, #764ba2);
+    }
+
+    .container {
+      width: 500px;
+      background: #fff;
+      padding: 40px;
+      border-radius: 20px;
+      text-align: center;
+      box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+    }
+
+    h2 {
+      color: #333;
+      margin-bottom: 25px;
+    }
+
+    #quote {
+      font-size: 1.5rem;
+      color: #444;
+      line-height: 1.6;
+      margin-bottom: 20px;
+      min-height: 100px;
+    }
+
+    #author {
+      font-size: 1.1rem;
+      color: #777;
+      margin-bottom: 30px;
+      font-style: italic;
+    }
+
+    button {
+      padding: 12px 30px;
+      border: none;
+      background: #667eea;
+      color: white;
+      font-size: 16px;
+      border-radius: 30px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    button:hover {
+      background: #764ba2;
+      transform: scale(1.05);
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h2>Random Quote Generator</h2>
+
+    <h1 id="quote">Click the button to get a quote</h1>
+    <p id="author"></p>
+
+    <button id="Btn">Next Quote</button>
+  </div>
+
+  <script>
+    let quote = document.getElementById("quote");
+    let author = document.getElementById("author");
+    let Btn = document.getElementById("Btn");
+
+    async function getQuote() {
+      try {
+        quote.innerText = "Loading...";
+        author.innerText = "";
+
+        let response = await fetch(
+          "https://dummyjson.com/quotes/random"
+        );
+
+        let data = await response.json();
+
+        quote.innerText = `"${data.quote}"`;
+        author.innerText = `~ ${data.author}`;
+      } catch (err) {
+        quote.innerText = "Failed to load quote ";
+      }
+    }
+
+    Btn.addEventListener("click", getQuote);
+
+    getQuote();
+  </script>
+
+</body>
+</html>
