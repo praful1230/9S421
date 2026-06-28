@@ -1,0 +1,132 @@
+False Value: 
+
+false
+0
+-0
+0n
+""
+null
+undefined
+NaN
+
+
+True Value:
+
+true
+1
+-1
+"Hello"
+"0"
+"false"
+[]
+{}
+function(){}
+Infinity
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+console.log([] == false);      
+console.log([] === false);     
+console.log(null == undefined);
+console.log(null === undefined);
+console.log(NaN == NaN);      
+console.log(typeof null); 
+console.log(typeof []);    
+console.log(Boolean([]));     
+console.log(Boolean({}));     
+
+
+
+
+
+
+
+
+
+Data Types
+│
+├── Primitive
+│   ├── Number
+│   ├── BigInt
+│   ├── String
+│   ├── Boolean
+│   ├── Undefined
+│   ├── Null
+│   └── Symbol
+│
+└── Non Primitive
+    └── Object
+        ├── Array
+        ├── Function
+        ├── Date
+        ├── Map
+        └── Set
+
+
+
+
+
+
+
+
+Operators
+│
+├── Arithmetic
+├── Assignment
+├── Comparison
+├── Logical
+├── Increment/Decrement
+├── Ternary
+├── Type
+├── Nullish
+├── Spread/Rest
+└── Bitwise
+
+
+
+
+
+
+
+
+
+Nullish Coalescing Operator
+Short circuiting:
+
+
+
+
+console.log(false || "Hello"); 
+console.log("Hi" && 100);      
+console.log(null || undefined);
+console.log(1 && 2 && 3);      
+console.log(1 && 0 && 3);      
+console.log("" || "JS");      
+
+
+function (array, return function and callstack)
+hoisting(var , let & const,class , function)
+callback(full code)
+closure
+HOF
+
+
+
